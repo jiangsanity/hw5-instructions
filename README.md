@@ -53,15 +53,15 @@ Now implement A* as normal. The only difference between A* used for behavior pla
 2. You need to use action add_lists and delete_lists to figure out the successor states. To generate a successor state, take an action. Check if the action is executable in the current state by checking to see if all of its preconditions are in the set of current state propositions. If so, then take the current state propositions, add all propositions in the action's add_list, and remove all propositions in the action's delete_list. This new set of propositions will be the new state that can be reached from the old state.
 
 --------------------------------------------------------
-## ***Instructions***
+# **INSTRUCTIONS**
 
-`STEP 0: `Copy your solution to the pathnetwork homework (mybuildpathnetwork.py).
+`STEP 0:` Copy your solution to the pathnetwork homework (mybuildpathnetwork.py).
 
 `STEP 1:` Implement A* for behavior planning. In planner.py, find the Planner class and complete the astar() function. The astar() function takes an initial state, a goal state, and a set of actions and produces a plan. A plan is an ordered list of actions. It must also return a list of visited states (in any order). In the codebase, there are classes for State and Action that you can use.
 
 *Hint:* initially A* will act as if it is breadth first search because the heuristic returns h=0 for all states by default. This will allow you to verify you have implemented your search loop correctly because it is the same for breadth first search and A*. Then you can turn on action costs. Then, after step 2 you can test with the HSP heuristic.
 
-`STEP 2: `Implement the HSP heuristic function in the compute_heuristic() function in Planner. The compute_heuristic() function takes an arbitrary state and a goal state and returns an integer.
+`STEP 2:` Implement the HSP heuristic function in the compute_heuristic() function in Planner. The compute_heuristic() function takes an arbitrary state and a goal state and returns an integer.
 
 `TESTING:` Use rundoor.py and runbank.py to test the planner. Test the planner with an agent in rundoormap.py and runbankmap.py
 
